@@ -1,1 +1,587 @@
+:root {
+/*colour dark scheme*/
+--text: #ccc5b9;
+--background-pale: #403d39;
+--background: #252422;
+--button: #eb5e28;
+--button-text: #40434e;
+--button-hover: #dc2f02;
+--hover: #eb5e28;
+--header1-h1: #f9895d;
+--header2-h2: #ccc5b9;
+/*colour light scheme*/
+--text-alt: #201E1F ;
+--background-pale-alt: #FEEFDD ;
+--background-alt: #FAAA8D ;
+--button-alt: #FF4000 ;
+--hover-alt: #50B2C0 ;
+}
+
+* {
+    /*margin: 10px;*/
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    
+}
+
+#header-img {
+    width: 30px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/*Navigation*/
+#nav-bar {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-around;*/
+    /*margin: 0px;*/
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--background-pale);
+    opacity: 0.9;
+    /*padding: 0 10px;*/
+    border-radius: 15px;
+    border: 5px solid var(--text);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0 5px;
+    font-family: 'gill sans', sans-serif;
+}
+
+.nav-links :hover {
+    color: var(--button);
+}
+
+.logo-container {
+    display: flex;
+    /*align-items: center;*/
+}
+
+.the-product {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 300;
+    font-family: verdana, sans-serif;
+    color: var(--text);
+}
+
+.headline {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+section::before{
+    display: block;
+    content: " ";
+    margin-top: -130px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+section {
+    margin: 40px 20px;
+    text-align: center;
+}
+
+
+h1 {
+    font-family: verdana, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: var(--header1-h1);
+}
+
+h2 {
+    font-family: verdana, sans-serif;
+    margin-bottom: 10px;
+    color: var(--header2-h2);
+}
+
+h3 {
+    font-size: 20px;
+    font-family: 'gill sans', sans-serif;
+    color: var(--text);
+}
+
+p {
+    font-family: 'gill sans', sans-serif;
+    color: var(--text);
+}
+
+#small-contact {
+    color: var(--text);
+    font-family: "quicksand";
+}
+
+.small-contact {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.banner {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: url(images/CastleBW.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: animate-background linear 25s infinite;
+    animation-direction: alternate;
+    /*border-bottom: solid 3px var(--text);*/
+}
+
+@keyframes animate-background {
+    from { background-position: 0px 0px;}
+    to { background-position: -100px;}
+}
+
+.large-logo {
+    border-radius: 50%;
+    align-items: center;
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--text);
+    margin-top: 85px;
+}
+
+#about {
+    /*background-image: url(images/background-1.jpg);*/
+    /*background-size: cover;*/
+    font-family: 'gill sans', sans-serif;
+    color: var(--header1-h1);
+    text-align: center;
+    font-size: x-large;
+    justify-content: center;
+    padding: 0px 20px 0px 20px;
+}
+
+.about {
+    margin: 20px 20px 20px 20px;
+}
+
+/*.icon {
+    color: var(--button);
+    margin-right: 20px;
+}*/
+
+/*#features {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.feature {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin: 20px 20px 30px 20px;
+    font-family: 'quicksand';
+    color: var(--button-text);
+}*/
+
+#testimonials {
+    margin: 20px 0 20px 0;
+    
+}
+
+/*.sub-title {
+    font-family: "gill sans";
+    color: var(--text);
+    margin-bottom: 20px;
+}*/
+
+.testimonial-card {
+    background-color: var(--background-pale);
+    border-radius: 15px;
+    border: 5px solid var(--text);
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 30px;
+    min-height: 370px; 
+}
+
+.testimonial-inner-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    margin: auto;
+}
+
+.quote-icon {
+    color: var(--button);
+}
+
+.review {
+    font-family: verdana, sans-serif;
+    color: var(--header1-h1);
+    margin-bottom: 20px;
+    min-height: 80px;
+}
+
+.reviewer {
+    font-family: 'gill sans', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    min-height: 390px;   
+}
+
+
+#contact {
+    color: var(--text);
+    font-family: "quicksand";
+}
+
+#contact h1 {
+    margin-top: 30px;
+}
+
+#contact .quote {
+    color: var(--text);
+    font-size: 25px;
+    font-style: italic;
+    color: var(--text);
+}
+
+#contact .social-medias {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#contact .social-media {
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 22px;
+    font-family: "quicksand";
+}
+
+#contact .social-media:hover {
+   
+    color: var(--hover);
+}
+
+#contact .social-media:active {
+    transform: translateY(5px);
+}
+
+#email-telephone {
+    font-family: "quicksand";
+    color: var(--text);
+    font-size: larger;
+}
+
+footer {
+    border-top: 2px solid var(--text);
+    color: var(--header1-h1);
+    font-family: 'gill sans', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}
+
+
+/*Work Page*/
+
+.work_packages {
+    margin: 60px 30px 10px 30px;
+}
+
+.product-image {
+    width: 100%;
+    margin: auto;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid var(--text);
+    border-radius: 10px;
+}
+
+.product1 {
+    background-image: url(images/peppermint.png);
+    background-color: #FEEFDD;
+}
+
+.product2 {
+    background-image: url(images/Fisheries-Control-Room-27.jpg);
+}
+
+.product3 {
+    background-image: url(images/Phone-and-patch-2-2048x1364.jpg);
+}
+
+.product4 {
+    background-image: url(images/Lifeline\ Vi.png);
+}
+
+.product5 {
+    background-image: url(images/41XfxartKUL.jpg);
+}
+
+.card {
+    background-color: var(--background-pale);
+    border-radius: 10px;
+    border: 1px solid var(--text);
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.content {
+    font-family: 'gill sans', sans-serif;
+    font-size: larger;
+    color: var(--text);
+    margin-bottom: 10px;
+    min-width: 60px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/*.main-price {
+    margin-right: 5px;
+    font-size: 30px;
+    font-family: 'Courier New';
+    color: var(--header1-h1);
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--text);
+}*/
+
+
+.author {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 5px;
+    color: var(--button-text);
+    text-transform: uppercase;
+}
+
+.header {
+    font-family:  Arial, sans-serif;
+    color: var(--header1-h1);
+    margin-bottom: 5px;
+}
+
+.add {
+    background-color: var(--hover);
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    color: var(--text);
+    font-family: 'gill sans', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.add:hover {
+    background-color: var(--button-hover);
+}
+
+.add:active {
+    background-color: var(--socialmedia);
+    transform: translateY(4px);
+}
+
+/*end work page*/
+
+/*company pages*/
+#company_image {
+    max-width: 600px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#overview {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+progress {
+    width: 250px;
+    display: block; /* default: inline-block */
+    padding: 3px;
+    border: 0 none;
+    background: #444;
+    border-radius: 14px;
+  }
+  progress::-moz-progress-bar {
+    border-radius: 12px;
+    background: orange;
+  
+  }
+  /* webkit */
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    progress {
+      height: 20px;
+      margin: 10px;
+    }
+  }
+  progress::-webkit-progress-bar {
+      background: transparent;
+  }  
+  progress::-webkit-progress-value {  
+    border-radius: 12px;
+    background: orange;
+  } 
+
+  .skills {
+    color: var(--text);
+    font-family: 'gill sans', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table, td {
+    border-collapse: collapse;
+    /*border: 1px solid wheat;*/
+    justify-content: center;  
+  }
+
+.tech-button {
+    border-radius: 20%;
+    border: solid 2px var(--text);
+    background-color: var(--button);
+    color: var(--text);
+    height: 30px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.tech_stack {
+    color: var(--button);
+    align-items: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*#team-info .team-size {
+    color: orange;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 22px;
+    font-family: "quicksand";
+}*/
+
+#team-info .team-size {
+    color: orange;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 18px;
+    font-family: "quicksand";
+    justify-content: center;
+}
+
+.team-structure {
+    align-items: center;
+    margin: 20px;
+    font-size: 18px;
+    font-family: "quicksand";
+    justify-content: center;
+}
+
+.team-button {
+    border-radius: 20%;
+    border: solid 2px #858585;
+    background-color: orange;
+    color: #636262;
+    height: 30px;
+    align-items: center;
+    font-weight: 700;
+}
+
+#inactive {
+    color: #444;
+}
+
+/*end of company pages*/
+
+@media only screen and (min-width: 600px) {
+    #nav-bar {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (450px < width < 600px) {
+    .card {
+        font-size: 0.85rem;
+    }
+    .product-image {
+        height: 400px;
+    }
+}
+
+@media only screen and (450px <= width) {
+    .card {
+        display: flex;
+        max-width: 700px;
+    }
+    .inner-card {
+        width: 300px;
+        padding: 20px;
+    }
+/*    .product-image {
+        height: 300px;
+        border-radius: 10px 0 0 10px;
+    }*/
+}
+
+@media only screen and (width >=900px) {
+    #video {
+        width: 60%;
+    }
+    .product-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
 
